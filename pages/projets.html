@@ -1,15 +1,156 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <title>Portfolio Julien Boulanger</title>
+    <title>Portfolio Julien Boulanger - Mes Projets</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <style>
         body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #222; /* Fond sombre pour la page */
+            color: #eee; /* Couleur de texte claire */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
             max-width: 960px;
-            margin-left: 0;
-            margin-right: 0px;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+
+        .social-icons button {
+            vertical-align: middle;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+            nav ul li a {
+                color: #fff;
+                text-decoration: none;
+                margin-left: 20px;
+            }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            width: 90%;
+            max-width: 960px;
+            box-sizing: border-box;
+        }
+
+        .video-container {
+            border: 2px solid #000fff;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #111;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: height 0.3s ease-in-out; /* Pour une animation de la hauteur */
+            height: auto; /* La hauteur s'adapte au contenu par défaut */
+            display: flex;
+            flex-direction: column; /* Pour organiser les éléments à l'intérieur */
+            align-items: center; /* Pour centrer les éléments horizontalement */
+        }
+
+        .video-container {
+            border: 2px solid #000fff;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #111;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: height 0.3s ease-in-out; /* Pour une animation de la hauteur */
+            height: 275px; /* La hauteur s'adapte au contenu par défaut */
+            display: flex;
+            flex-direction: column; /* Pour organiser les éléments à l'intérieur */
+            align-items: center; /* Pour centrer les éléments horizontalement */
+        }
+
+            .video-container.увеличенный {
+                height: auto; /* La hauteur s'ajuste automatiquement pour montrer le texte */
+            }
+
+        .video-player {
+            border-radius: 8px; /* Réduit légèrement le rayon pour qu'il reste dans le conteneur */
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: border-radius 0.3s ease-in-out; /* Transition pour le rayon de la vidéo */
+        }
+
+        .video-container.увеличенный .video-player {
+            border-radius: 6px; /* Adapte le rayon de la vidéo quand le conteneur grandit */
+        }
+
+        .video-title {
+            text-align: center;
+            color: #ff0000;
+            margin-top: 5px;
+            padding: 10px;
+            width: 100%; /* Pour que le titre prenne toute la largeur */
+            box-sizing: border-box; /* Pour inclure le padding dans la largeur */
+        }
+
+        .hidden-text {
+            text-align: center;
+            color: #fff;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 0 0 10px 10px;
+            max-height: 0; /* Cache le texte au début en ayant une hauteur maximale de 0 */
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+            order: 2; /* Place le texte après la vidéo (order: 1 par défaut) */
+            position: static; /* Pour qu'il suive le flux normal */
+            margin-top: 5px; /* Un peu d'espace entre le titre et le texte */
+        }
+
+        .video-container.увеличенный .hidden-text {
+            max-height: 150px; /* Hauteur maximale pour le texte */
+            overflow-y: auto; /* Ajoute une barre de défilement si le texte est trop long */
         }
     </style>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -27,7 +168,7 @@
                     function copierTexte() {
                         const texte = document.getElementById("monTexte").textContent;
                         navigator.clipboard.writeText(texte).then(() => {
-                            alert("Email copi� !");
+                            alert("Email copié !");
                         });
                     }
                 </script>
@@ -39,32 +180,63 @@
                 </ul>
             </nav>
         </div>
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
-            <div style="border: 2px solid #000fff; border-radius: 10px; padding: 10px; background-color: #111;">
-                <video controls width="100%" height="auto" style="border-radius: 8px;">
-                    <source src="../Presentation/WordlePresentation.mp4" type="video/mp4">
-                    <p>Votre navigateur ne supporte pas la lecture de vid�os.</p>
-                </video>
-                <p style="text-align: center; color: #ff0000; margin-top: 5px;">Wordle</p>
-            </div>
-
-            <div style="border: 2px solid #000fff; border-radius: 10px; padding: 10px; background-color: #111;">
-                <video controls width="100%" height="auto" style="border-radius: 8px;">
-                    <source src="../Presentation/StarElementalPresentation.mp4" type="video/mp4">
-                    <p>Votre navigateur ne supporte pas la lecture de vid�os.</p>
-                </video>
-                <p style="text-align: center; color: #ff0000; margin-top: 5px;">StarElemental</p>
-            </div>
-
-            <div style="border: 2px solid #000fff; border-radius: 10px; padding: 10px; background-color: #111;">
-                <video controls width="100%" height="auto" style="border-radius: 8px;">
-                    <source src="../Presentation/SolnishPresentation.mp4" type="video/mp4">
-                    <p>Votre navigateur ne supporte pas la lecture de vid�os.</p>
-                </video>
-                <p style="text-align: center; color: #ff0000; margin-top: 5px;">Solnish</p>
-            </div>
-
-        </div>
     </header>
+
+    <div class="grid-container">
+        <div class="video-container" onclick="toggleSize(this)">
+            <video controls class="video-player">
+                <source src="../Presentation/WordlePresentation.mp4" type="video/mp4">
+                <p>Votre navigateur ne supporte pas la lecture de vidéos.</p>
+            </video>
+            <p class="video-title">Wordle</p>
+            <p class="hidden-text">Ce Wordle est un projet en solo lors de mes premieres semaines au Gaming Campus. Il a dure 1 semaine et contient dans sa base de donnée une vingtaine de mots</p>
+        </div>
+
+        <div class="video-container" onclick="toggleSize(this)">
+            <video controls class="video-player">
+                <source src="../Presentation/StarElementalPresentation.mp4" type="video/mp4">
+                <p>Votre navigateur ne supporte pas la lecture de vidéos.</p>
+            </video>
+            <p class="video-title">StarElemental</p>
+            <p class="hidden-text">StarElemental est une sorte de Survival dans le theme du Shoot'Em Up. Le twist, ce n'est pas vous qui avez les armes alors survivez et atteignez le meilleur score ! Il a été crée en groupe de 2 en 2 semaines et avait pour theme les elements, c'est pour cela qu'il y avait une roue comprenant differents vaissaux qui avaient chaqu'une une resistance à un element ennemi, element ayant des particularites comme une plus grande vitesse ou encore une plus grande presence.</p>
+        </div>
+
+        <div class="video-container" onclick="toggleSize(this)">
+            <video controls class="video-player">
+                <source src="../Presentation/SolnishPresentation.mp4" type="video/mp4">
+                <p>Votre navigateur ne supporte pas la lecture de vidéos.</p>
+            </video>
+            <p class="video-title">Solnish</p>
+            <p class="hidden-text">Solnish est un projet de 2 semaines dont je suis extremement fier en tant que seul Dev Gameplay de mon groupe de 4 Tech (1 Gameplay, 2 Moteurs et 1 chef de projet). Nous etions 10 dans chaque groupes (4 tech de premiere annee, 3 artistes de premiere annee et 3 bussiness de deuxieme annee). Lors de ces 2 semaines nous avons du regler de nombreux probleme et beaucoup d'entre eux ont ete resolu'</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleSize(container) {
+            container.classList.toggle('увеличенный');
+        }
+
+        let videoContainers = document.querySelectorAll('.video-container');
+
+        videoContainers.forEach(container => {
+            let video = container.querySelector('.video-player');
+
+            container.addEventListener('mouseenter', function () {
+                video.controls = true;
+            });
+
+            container.addEventListener('mouseleave', function () {
+                video.controls = false;
+            });
+
+            video.addEventListener('focus', function () {
+                video.controls = true;
+            });
+
+            video.addEventListener('blur', function () {
+                video.controls = false;
+            });
+        });
+    </script>
 </body>
 </html>
