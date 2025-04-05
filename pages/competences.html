@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Julien Boulanger</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Boulanger Julien</h1>
+            <div class="social-icons">
+                <img src="../images/LinkedIn.png" alt="LinkedIn" onclick="window.open('https://www.linkedin.com/in/julien-boulanger/', '_blank');">
+                <img src="../images/github.png" alt="GitHub" onclick="window.open('https://github.com/Diamond-R3D', '_blank');">
+                <p id="monTexte" style="display: none;">jboulanger@gaming.tech</p>
+                <button onclick="copierTexte()" style="border: none; background: none;">
+                    <img src="../images/Email.png" alt="Email">
+                </button>
+
+                <script>
+                    function copierTexte() {
+                        const texte = document.getElementById("monTexte").textContent;
+                        navigator.clipboard.writeText(texte).then(() => {
+                            alert("Email copié !");
+                        });
+                    }
+                </script>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="projets.html">Projets</a></li>
+                    <li><a href="competences.html">Competences</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+</html>
