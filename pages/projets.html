@@ -2,6 +2,13 @@
 <html>
 <head>
     <title>Portfolio Julien Boulanger</title>
+    <style>
+        body {
+            max-width: 960px;
+            margin-left: 0;
+            margin-right: 0px;
+        }
+    </style>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -28,10 +35,35 @@
             <nav>
                 <ul>
                     <li><a href="../index.html">Accueil</a></li>
-                    <li><a href="projets.html">Projets</a></li>
                     <li><a href="competences.html">Competences</a></li>
                 </ul>
             </nav>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+            <div style="border: 2px solid #000fff; border-radius: 10px; padding: 10px; background-color: #111;">
+                <video controls width="100%" height="auto" style="border-radius: 8px;">
+                    <source src="../Presentation/WordlePresentation.mp4" type="video/mp4">
+                    <p>Votre navigateur ne supporte pas la lecture de vidéos.</p>
+                </video>
+                <p style="text-align: center; color: #ff0000; margin-top: 5px;">Wordle</p>
+            </div>
+
+            <div style="border: 2px solid #000fff; border-radius: 10px; padding: 10px; background-color: #111;">
+                <video controls width="100%" height="auto" style="border-radius: 8px;">
+                    <source src="../Presentation/StarElementalPresentation.mp4" type="video/mp4">
+                    <p>Votre navigateur ne supporte pas la lecture de vidéos.</p>
+                </video>
+                <p style="text-align: center; color: #ff0000; margin-top: 5px;">StarElemental</p>
+            </div>
+
+            <div style="border: 2px solid #000fff; border-radius: 10px; padding: 10px; background-color: #111;">
+                <video controls width="100%" height="auto" style="border-radius: 8px;">
+                    <source src="../Presentation/SolnishPresentation.mp4" type="video/mp4">
+                    <p>Votre navigateur ne supporte pas la lecture de vidéos.</p>
+                </video>
+                <p style="text-align: center; color: #ff0000; margin-top: 5px;">Solnish</p>
+            </div>
+
         </div>
     </header>
 </body>
