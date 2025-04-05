@@ -36,6 +36,7 @@
 
         h1 {
             margin: 0;
+            text-align: center;
         }
 
         .social-icons img {
@@ -64,35 +65,51 @@
             }
     </style >
 </head>
-        <body >
+    <body >
         <header >
-        <div class="container" >
-        <h1 > Boulanger Julien</h1 >
-        <div class="social-icons" >
-        <img src="images/LinkedIn.png" alt="LinkedIn" onclick="window.open('https://www.linkedin.com/in/julien-boulanger/', '_blank');" >
-        <img src="images/github.png" alt="GitHub" onclick="window.open('https://github.com/Diamond-R3D', '_blank');" >
-        <p id="monTexte" style="display: none;" > jboulanger@gaming.tech</p >
-        <button onclick="copierTexte()" style="border: none; background: none;" >
-        <img src="images/Email.png" alt="Email" >
-        </button >
+            <div class="container" >
+                <h1 > Boulanger Julien</h1 >
+                <div class="social-icons" >
+                <img src="images/LinkedIn.png" alt="LinkedIn" onclick="window.open('https://www.linkedin.com/in/julien-boulanger/', '_blank');" >
+                <img src="images/github.png" alt="GitHub" onclick="window.open('https://github.com/Diamond-R3D', '_blank');" >
+                <p id="monTexte" style="display: none;" > jboulanger@gaming.tech</p >
+                <button onclick="copierTexte()" style="border: none; background: none;" >
+                    <img src="images/Email.png" alt="Email" >
+                </button >
 
-        <script >
-        function copierTexte() {
-            const texte = document.getElementById("monTexte").textContent;
-            navigator .clipboard.writeText(texte).then(() => {
-                            alert("Email copié !");
+                <script >
+                    function copierTexte() {
+                        const texte = document.getElementById("monTexte").textContent;
+                        navigator .clipboard.writeText(texte).then(() => {
+                                    alert("Email copié !");
                         });
-        }
+                    }
 
-        </script >
-        </div >
-        <nav >
-        <ul >
-        <li > <a href="pages/projets.html" > Projets</a > </li >
-        <li > <a href="pages/competences.html" > Competences</a > </li >
-        </ul >
-        </nav >
-        </div >
+                    </script >
+                </div >
+                <nav >
+                    <ul >
+                        <li > <a href="pages/projets.html" > Projets</a > </li >
+                        <li > <a href="pages/competences.html" > Competences</a > </li >
+                    </ul >
+                </nav >
+            </div >
         </header >
-        </body >
-        </html >
+        <div>
+            <h1>
+                <br>
+                <br>
+                Site en construction, désolé pour le dérangement.
+                <br>
+                <br>
+                Je vous invite à consulter mes projets sur la page dédiée.
+                <br>
+                <br>
+                Vous pouvez aussi me contacter par email ou sur mes réseaux sociaux.
+                <br>
+                <br>
+                Merci de votre compréhension.
+            </h1>
+        </div>
+    </body >
+</html >
