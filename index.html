@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html>
 <head>
     <title>Portfolio Julien Boulanger</title>
@@ -65,6 +65,13 @@
                 text-decoration: none;
                 margin-left: 20px;
             }
+        .help {
+            color: #ff0000; /* Vert clair */
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center; /* Centre le titre au-dessus des colonnes */
+            grid-column: 1 / -1; /* Fait prendre toute la largeur du grid au titre */
+        }
     </style>
 </head>
     <body >
@@ -83,7 +90,7 @@
                     function copierTexte() {
                         const texte = document.getElementById("monTexte").textContent;
                         navigator .clipboard.writeText(texte).then(() => {
-                                    alert("Email copié !");
+                                    alert("Email copiÃ© !");
                         });
                     }
 
@@ -97,21 +104,21 @@
                 </nav >
             </div >
         </header >
-        <div>
+        <div class="help">
+            <br>
+            <br>
             <h1>
-                <br>
-                <br>
-                Site en construction, désolé pour le dérangement.
-                <br>
-                <br>
-                Je vous invite à consulter mes projets sur la page dédiée.
-                <br>
-                <br>
-                Vous pouvez aussi me contacter par email ou sur mes réseaux sociaux.
-                <br>
-                <br>
-                Merci de votre compréhension.
+                Site en construction, dÃ©solÃ© pour le dÃ©rangement.
             </h1>
+            <br>
+            <br>
+            Je vous invite Ã  consulter mes projets sur la page dÃ©diÃ©e.
+            <br>
+            <br>
+            Vous pouvez aussi me contacter par email ou sur mes rÃ©seaux sociaux.
+            <br>
+            <br>
+            Merci de votre comprÃ©hension.
         </div>
     </body >
 </html >
