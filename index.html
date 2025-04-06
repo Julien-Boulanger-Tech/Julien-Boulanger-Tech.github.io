@@ -78,24 +78,25 @@
         <header >
             <div class="container" >
                 <h1 > Boulanger Julien</h1 >
-                <div class="social-icons" >
-                <img src="images/LinkedIn.png" alt="LinkedIn" onclick="window.open('https://www.linkedin.com/in/julien-boulanger/', '_blank');" >
-                <img src="images/github.png" alt="GitHub" onclick="window.open('https://github.com/Diamond-R3D', '_blank');" >
-                <p id="monTexte" style="display: none;" > jboulanger@gaming.tech</p >
-                <button onclick="copierTexte()" style="border: none; background: none;" >
-                    <img src="images/Email.png" alt="Email" >
-                </button >
+                <div class="social-icons">
+                    <img src="images/LinkedIn.png" alt="LinkedIn" onclick="window.open('https://www.linkedin.com/in/julien-boulanger/', '_blank');">
+                    <img src="images/github.png" alt="GitHub" onclick="window.open('https://github.com/Diamond-R3D', '_blank');">
+                    <img src="images/linktree.png" alt="LinkTree" onclick="window.open('https://linktr.ee/JulienBoulanger?utm_source=linktree_admin_share', '_blank');">
+                    <p id="monTexte" style="display: none;"> jboulanger@gaming.tech</p>
+                    <button onclick="copierTexte()" style="border: none; background: none;">
+                        <img src="images/Email.png" alt="Email">
+                    </button>
 
-                <script >
-                    function copierTexte() {
-                        const texte = document.getElementById("monTexte").textContent;
-                        navigator .clipboard.writeText(texte).then(() => {
-                                    alert("Email copié !");
-                        });
-                    }
+                    <script>
+                        function copierTexte() {
+                            const texte = document.getElementById("monTexte").textContent;
+                            navigator.clipboard.writeText(texte).then(() => {
+                                alert("Email copié !");
+                            });
+                        }
 
-                    </script >
-                </div >
+                    </script>
+                </div>
                 <nav >
                     <ul >
                         <li > <a href="pages/projets.html" > Projets</a > </li >
