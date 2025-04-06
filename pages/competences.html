@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <title>Portfolio Julien Boulanger</title>
@@ -37,6 +37,7 @@
         h1 {
             margin: 0;
             text-align: center;
+            font-size: 1em;
         }
 
         .social-icons img {
@@ -63,6 +64,99 @@
                 text-decoration: none;
                 margin-left: 20px;
             }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            width: 90%;
+            max-width: 960px;
+            box-sizing: border-box;
+        }
+
+        .skills-container {
+            margin-top: 20px; /* Espace au-dessus du conteneur */
+            border: 2px solid #000fff;
+            border-radius: 10px;
+            background-color: #111; /* Le fond est géré par le conteneur parent */
+            padding: 30px;
+            border-radius: 10px;
+            width: 83%;
+            max-width: none; /* Permet au conteneur de rétrécir */
+            display: grid; /* Utilise grid pour organiser en colonnes */
+            grid-template-columns: auto auto; /* Deux colonnes de largeur automatique */
+            column-gap: 100px; /* Espace de 50px entre les colonnes */
+            row-gap: 20px; /* Garde l'espace de 20px entre les lignes */
+        }
+
+            .skills-container h2 {
+                color: #ff0000; /* Vert clair */
+                margin-top: 0;
+                margin-bottom: 20px;
+                text-align: center; /* Centre le titre au-dessus des colonnes */
+                grid-column: 1 / -1; /* Fait prendre toute la largeur du grid au titre */
+            }
+
+        .skills-container2 {
+            margin-top: 20px; /* Espace au-dessus du conteneur */
+            border: 2px solid #000fff;
+            border-radius: 10px;
+            background-color: #111; /* Le fond est géré par le conteneur parent */
+            padding: 30px;
+            border-radius: 10px;
+            width: 25.1%;
+            height : auto;
+            max-width: none; /* Permet au conteneur de rétrécir */
+        }
+
+            .skills-container2 h2 {
+                color: #ff0000; /* Vert clair */
+                margin-top: 0;
+                margin-bottom: 20px;
+                text-align: center; /* Centre le titre au-dessus des colonnes */
+                grid-column: 1 / -1; /* Fait prendre toute la largeur du grid au titre */
+            }
+
+        .skills-column {
+            /* flex: 1; On n'a plus besoin de flex car on utilise grid */
+            /* width: auto; La largeur est gérée par le contenu et le grid */
+
+        }
+
+            .skills-column h3 {
+                color: #fff;
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            text-align: center; /* Aligne le texte à gauche */    
+            margin-bottom: 8px;
+            white-space: nowrap; /* Empêche le texte de passer à la ligne si possible */
+        }
+
+            .skill-item img {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+                vertical-align: middle;
+                text-align: center; /* Aligne le texte à gauche */
+            }
+        .skill-item2 {
+            display: flex;
+            align-items: center;
+            text-align: center; /* Aligne le texte à gauche */
+            margin-bottom: 8px;
+            white-space: nowrap; /* Empêche le texte de passer à la ligne si possible */
+        }
+        .skill-item img {
+            margin-right: 10px;
+            text-align: center; /* Aligne le texte à gauche */
+        }
+
     </style>
 </head>
 <body>
@@ -81,7 +175,7 @@
                     function copierTexte() {
                         const texte = document.getElementById("monTexte").textContent;
                         navigator.clipboard.writeText(texte).then(() => {
-                            alert("Email copi� !");
+                            alert("Email copié !");
                         });
                     }
                 </script>
@@ -94,21 +188,74 @@
             </nav>
         </div>
     </header>
-    <div>
-        <h1>
-            <br>
-            <br>
-            Site en construction, d�sol� pour le d�rangement.
-            <br>
-            <br>
-            Je vous invite � consulter mes projets sur la page d�di�e.
-            <br>
-            <br>
-            Vous pouvez aussi me contacter par email ou sur mes r�seaux sociaux.
-            <br>
-            <br>
-            Merci de votre compr�hension.
-        </h1>
+    <div class="grid-container">
+        <div class="skills-container">
+            <h2>Mes compétences techniques</h2>
+            <div class="skills-column langages">
+                <h3>Langages</h3>
+                <div class="skill-item">
+                    <img src="../images/Csharp.png" alt="C#"> C#
+                </div>
+                <div class="skill-item">
+                    <img src="../images/C++.png" alt="C++"> C++
+                </div>
+                <div class="skill-item">
+                    <img src="../images/C.png" alt="C"> C
+                </div>
+                <div class="skill-item">
+                    <img src="../images/HTMLCSS.webp" alt="HTML/CSS"> HTML/CSS
+                </div>
+                <div class="skill-item">
+                    <img src="../images/Python.png" alt="Python"> Python
+                </div>
+            </div>
+            <div class="skills-column outils">
+                <h3>Outils</h3>
+                <div class="skill-item">
+                    <img src="../images/unity.png" alt="Unity"> Unity
+                </div>
+                <div class="skill-item">
+                    <img src="../images/github.png" alt="Git / GitHub"> Git / GitHub
+                </div>
+                <div class="skill-item">
+                    <img src="../images/VSC.png" alt="Visual Studio Code"> Visual Studio Code
+                </div>
+                <div class="skill-item">
+                    <img src="../images/VS.png" alt="Visual Studio"> Visual Studio
+                </div>
+            </div>
+        </div>
+        <div class="skills-container">
+            <h2>Mes Soft Skills</h2>
+            <div class="skills-column SoftSkill">
+                <div class="skill-item">
+                    La résolution de problèmes
+                </div>
+                <div class="skill-item">
+                    La créativité
+                </div>
+                <div class="skill-item">
+                    La communication
+                </div>
+                <div class="skill-item">
+                    Le travail d'équipe
+                </div>
+                <div class="skill-item">
+                    La gestion du temps
+                </div>
+                <div class="skill-item">
+                    L'adaptabilité
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="skills-container2">
+        <h2>Mon CV</h2>
+        <div class="skills-column CV">
+            <div class="skill-item2">
+                <img src="../images/CV Julien Boulanger.png" alt="CV Julien Boulanger" width="380" height="500">
+            </div>
+        </div>
     </div>
 </body>
 </html>
