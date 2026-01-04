@@ -9,8 +9,8 @@
         body {
             font-family: sans-serif;
             margin: 0;
-            background-color: #222; /* Fond sombre pour la page */
-            color: #eee; /* Couleur de texte claire */
+            background-color: #222; 
+            color: #eee;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -39,7 +39,7 @@
         h1 {
             margin: 0;
             text-align: center;
-            font-size: 1em; /* Taille de police plus grande pour le titre */
+            font-size: 1em;
         }
 
         .social-icons img {
@@ -86,27 +86,27 @@
             overflow: hidden;
             position: relative;
             cursor: pointer;
-            transition: height 0.3s ease-in-out; /* Pour une animation de la hauteur */
-            height: 275px; /* La hauteur s'adapte au contenu par défaut */
+            transition: height 0.3s ease-in-out; 
+            height: 275px; 
             display: flex;
-            flex-direction: column; /* Pour organiser les éléments à l'intérieur */
-            align-items: center; /* Pour centrer les éléments horizontalement */
+            flex-direction: column; 
+            align-items: center; 
         }
 
             .video-container.увеличенный {
-                height: auto; /* La hauteur s'ajuste automatiquement pour montrer le texte */
+                height: auto;
             }
 
         .video-player {
-            border-radius: 8px; /* Réduit légèrement le rayon pour qu'il reste dans le conteneur */
+            border-radius: 8px; 
             display: block;
             width: 100%;
             height: auto;
-            transition: border-radius 0.3s ease-in-out; /* Transition pour le rayon de la vidéo */
+            transition: border-radius 0.3s ease-in-out; 
         }
 
         .video-container.увеличенный .video-player {
-            border-radius: 6px; /* Adapte le rayon de la vidéo quand le conteneur grandit */
+            border-radius: 6px;
         }
 
         .video-title {
@@ -114,8 +114,8 @@
             color: #ff0000;
             margin-top: 5px;
             padding: 10px;
-            width: 100%; /* Pour que le titre prenne toute la largeur */
-            box-sizing: border-box; /* Pour inclure le padding dans la largeur */
+            width: 100%;
+            box-sizing: border-box; 
         }
 
         .hidden-text {
@@ -126,17 +126,17 @@
             width: 100%;
             box-sizing: border-box;
             border-radius: 0 0 10px 10px;
-            max-height: 0; /* Cache le texte au début en ayant une hauteur maximale de 0 */
+            max-height: 0; 
             overflow: hidden;
             transition: max-height 0.3s ease-in-out;
-            order: 2; /* Place le texte après la vidéo (order: 1 par défaut) */
-            position: static; /* Pour qu'il suive le flux normal */
-            margin-top: 5px; /* Un peu d'espace entre le titre et le texte */
+            order: 2; 
+            position: static;
+            margin-top: 5px; 
         }
 
         .video-container.увеличенный .hidden-text {
-            max-height: 150px; /* Hauteur maximale pour le texte */
-            overflow-y: auto; /* Ajoute une barre de défilement si le texte est trop long */
+            max-height: 150px;
+            overflow-y: auto; 
         }
     </style>
 </head>
@@ -146,15 +146,15 @@
             <h1>Boulanger Julien</h1>
             <div class="social-icons">
                 <img src="../images/LinkedIn.png" alt="LinkedIn" onclick="window.open('https://www.linkedin.com/in/julien-boulanger/', '_blank');">
-                <img src="../images/github.png" alt="GitHub" onclick="window.open('https://github.com/Diamond-R3D', '_blank');">
+                <img src="../images/github.png" alt="GitHub" onclick="window.open('https://github.com/Boulanger-Julien', '_blank');">
                 <img src="../images/linktree.png" alt="LinkTree" onclick="window.open('https://linktr.ee/JulienBoulanger?utm_source=linktree_admin_share', '_blank');">
                 <p id="monTexte" style="display: none;">julien.boulanger733@gmail.com</p>
-                <button onclick="copierTexte()" style="border: none; background: none;">
+                <button onclick="copyText()" style="border: none; background: none;">
                     <img src="../images/Email.png" alt="Email">
                 </button>
 
                 <script>
-                    function copierTexte() {
+                    function copyText() {
                         const texte = document.getElementById("monTexte").textContent;
                         navigator.clipboard.writeText(texte).then(() => {
                             alert("Email copié !");
@@ -165,7 +165,7 @@
             <nav>
                 <ul>
                     <li><a href="../index.html">Accueil</a></li>
-                    <li><a href="competences.html">Competences</a></li>
+                    <li><a href="competences.html">Compétences</a></li>
                 </ul>
             </nav>
         </div>

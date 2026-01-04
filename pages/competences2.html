@@ -79,26 +79,23 @@
         .skills-container {
             margin-top: 20px; 
             border: 2px solid #000fff;
-            border-radius: 10px;
             background-color: #111;
             padding: 30px;
             border-radius: 10px;
-            width: auto;
-            max-width: none; 
             display: grid; 
-            grid-template-columns: auto auto; 
-            column-gap: 100px; 
+            grid-template-columns: 1fr 1fr; 
+            column-gap: 20  px; 
             row-gap: 20px; 
+            box-sizing: border-box;
         }
 
-            .skills-container h2 {
-                color: #ff0000; 
-                margin-top: 0;
-                margin-bottom: 20px;
-                text-align: center; 
-                grid-column: 1 / -1; 
-            }
-
+        .skills-container h2 {
+            color: #ff0000; 
+            margin: 0 0 20px 0; 
+            grid-column: 1 / span 2;
+            text-align: center;
+            width: 100%;
+        }
         .skills-container2 {
             margin-top: 20px; 
             border: 2px solid #000fff;
@@ -133,28 +130,13 @@
             align-items: center;
             text-align: center; 
             margin-bottom: 8px;
-            white-space: nowrap; 
         }
-
-            .skill-item img {
-                width: 20px;
-                height: 20px;
-                margin-right: 10px;
-                vertical-align: middle;
-                text-align: center;
-            }
-
         .skill-item2 {
             display: flex;
             align-items: center;
             text-align: center; 
             margin-bottom: 8px;
             white-space: nowrap; 
-        }
-
-        .skill-item img {
-            margin-right: 10px;
-            text-align: center; 
         }
     </style>
 </head>
@@ -188,80 +170,43 @@
             </nav>
         </div>
     </header>
-    <div class="grid-container">
+        <div class="grid-container">
         <div class="skills-container">
-            <h2>Mes compétences techniques</h2>
-            <div class="skills-column langages">
-                <h3>Langages</h3>
+            <h2>Mes différents jobs étudiants</h2>
+            <div class="skills-column burger">
+                <h3>Burger King</h3>
                 <div class="skill-item">
-                    <img src="../images/Csharp.png" alt="C#"> C#
-                </div>
-                <div class="skill-item">
-                    <img src="../images/C++.png" alt="C++"> C++
-                </div>
-                <div class="skill-item">
-                    <img src="../images/C.png" alt="C"> C
-                </div>
-                <div class="skill-item">
-                    <img src="../images/HTMLCSS.webp" alt="HTML/CSS"> HTML/CSS
-                </div>
-                <div class="skill-item">
-                    <img src="../images/Python.png" alt="Python"> Python
+                    Meximieux-Pérouge, 2 mois (Mai - Juin 2025)
                 </div>
             </div>
-            <div class="skills-column outils">
-                <h3>Outils</h3>
+            <div class="skills-column sport">
+                <h3>Intersport</h3>
                 <div class="skill-item">
-                    <img src="../images/unity.png" alt="Unity"> Unity
-                </div>
-                <div class="skill-item">
-                    <img src="../images/github.png" alt="Git / GitHub"> Git / GitHub
-                </div>
-                <div class="skill-item">
-                    <img src="../images/VSC.png" alt="Visual Studio Code"> Visual Studio Code
-                </div>
-                <div class="skill-item">
-                    <img src="../images/VS.png" alt="Visual Studio"> Visual Studio
+                    Plaine de l'Ain, 1 mois (Juin 2024)
                 </div>
             </div>
         </div>
         <div class="skills-container">
-            <h2>Mes Soft Skills</h2>
-            <div class="skills-column SoftSkill">
+            <h2>Mes différents stages</h2>
+            <div class="skills-column EDF">
+                <h3>EDF</h3>
                 <div class="skill-item">
-                    La résolution de problèmes
+                    Saint-Vulbas, 2 mois (Juin - Juillet 2025)
                 </div>
+            </div>
+            <div class="skills-column bakery">
+                <h3>La miette d'Adripain</h3>
                 <div class="skill-item">
-                    La créativité
-                </div>
-                <div class="skill-item">
-                    La communication
-                </div>
-                <div class="skill-item">
-                    Le travail d'équipe
-                </div>
-                <div class="skill-item">
-                    La gestion du temps
-                </div>
-                <div class="skill-item">
-                    L'adaptabilité
+                    Blyes, 1 semaine (Avril 2021)
                 </div>
             </div>
         </div>
     </div>
-    <div class="skills-container2">
-        <h2>Mon CV</h2>
-        <div class="skills-column CV">
-            <div class="skill-item2">
-                <img src="../images/CV Julien Boulanger.png" alt="CV Julien Boulanger" width="380" height="500">
-            </div>
-        </div>
-    </div>
+
     <div class="container">
-        <h1></h1>
         <nav>
              <ul>
-                 <li><a href="competences2.html">Page 2 >>></a></li>
+                 <li><a href="competences.html"><<< Page 1</a></li>
              </ul>
         </nav>
     </div>

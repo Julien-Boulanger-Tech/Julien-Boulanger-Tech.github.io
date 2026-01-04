@@ -8,8 +8,8 @@
         body {
             font-family: sans-serif;
             margin: 0;
-            background-color: #222; /* Fond sombre pour la page */
-            color: #eee; /* Couleur de texte claire */
+            background-color: #222;
+            color: #eee;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -67,18 +67,18 @@
             }
         .presentation
         {
-            color : #fff; /* Couleur de texte claire */
-            margin-top: 20px; /* Espace au-dessus du conteneur */
+            color : #fff; 
+            margin-top: 20px; 
             border: 2px solid #000fff;
             border-radius: 10px;
-            background-color: #111; /* Le fond est géré par le conteneur parent */
+            background-color: #111; 
             padding: 30px;
             border-radius: 10px;
             width: auto;
-            max-width: none; /* Permet au conteneur de rétrécir */
-            display: grid; /* Utilise grid pour organiser en colonnes */
-            column-gap: 100px; /* Espace de 50px entre les colonnes */
-            row-gap: 20px; /* Garde l'espace de 20px entre les lignes */
+            max-width: none; 
+            display: grid; 
+            column-gap: 100px; 
+            row-gap: 20px; 
         }
         .presentation h1 {
             font-size: 2em;
@@ -86,8 +86,8 @@
 
         .circular-image {
             border-radius: 50%;
-            width: 150px; /* Adjust size as needed */
-            height: 150px; /* Adjust size as needed */
+            width: 150px;
+            height: 150px;
             object-fit: cover;
         }
     </style>
@@ -98,15 +98,15 @@
                 <h1 > Boulanger Julien</h1 >
                 <div class="social-icons">
                     <img src="images/LinkedIn.png" alt="LinkedIn" onclick="window.open('https://www.linkedin.com/in/julien-boulanger/', '_blank');">
-                    <img src="images/github.png" alt="GitHub" onclick="window.open('https://github.com/Diamond-R3D', '_blank');">
+                    <img src="images/github.png" alt="GitHub" onclick="window.open('https://github.com/Boulanger-Julien', '_blank');">
                     <img src="images/linktree.png" alt="LinkTree" onclick="window.open('https://linktr.ee/JulienBoulanger?utm_source=linktree_admin_share', '_blank');">
                     <p id="monTexte" style="display: none;">julien.boulanger733@gmail.com</p>
-                    <button onclick="copierTexte()" style="border: none; background: none;">
+                    <button onclick="copyText()" style="border: none; background: none;">
                         <img src="images/Email.png" alt="Email">
                     </button>
 
                     <script>
-                        function copierTexte() {
+                        function copyText() {
                             const texte = document.getElementById("monTexte").textContent;
                             navigator.clipboard.writeText(texte).then(() => {
                                 alert("Email copié !");
@@ -118,7 +118,7 @@
                 <nav >
                     <ul >
                         <li > <a href="pages/projets.html" > Projets</a > </li >
-                        <li > <a href="pages/competences.html" > Competences</a > </li >
+                        <li > <a href="pages/competences.html" > Compétences</a > </li >
                     </ul >
                 </nav >
             </div >
@@ -131,7 +131,7 @@
                 Julien Boulanger
             </h1>
             <h2>
-                Développeur informatique, étudiant de première année au Gaming Campus
+                Développeur informatique, étudiant de seconde année au Gaming Campus
             </h2>
         </div>
     </body >
