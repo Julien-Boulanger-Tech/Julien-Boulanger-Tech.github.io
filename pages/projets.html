@@ -9,7 +9,7 @@
         body {
             font-family: sans-serif;
             margin: 0;
-            background-color: #222; 
+            background-color: #222;
             color: #eee;
             display: flex;
             flex-direction: column;
@@ -77,67 +77,55 @@
             box-sizing: border-box;
         }
 
-
-        .video-container {
+        .project-card {
             border: 2px solid #000fff;
             border-radius: 10px;
             padding: 10px;
             background-color: #111;
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-            transition: height 0.3s ease-in-out; 
-            height: 275px; 
             display: flex;
-            flex-direction: column; 
-            align-items: center; 
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-            .video-container.увеличенный {
-                height: auto;
+            .project-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 5px 15px rgba(0, 15, 255, 0.4);
             }
 
-        .video-player {
-            border-radius: 8px; 
-            display: block;
+        .project-image {
+            border-radius: 8px;
             width: 100%;
-            height: auto;
-            transition: border-radius 0.3s ease-in-out; 
+            height: 180px;
+            object-fit: cover;
         }
 
-        .video-container.увеличенный .video-player {
-            border-radius: 6px;
-        }
-
-        .video-title {
+        .project-title {
             text-align: center;
             color: #ff0000;
-            margin-top: 5px;
-            padding: 10px;
-            width: 100%;
-            box-sizing: border-box; 
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
         }
 
-        .hidden-text {
-            text-align: center;
-            color: #fff;
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.8);
+        .project-details {
             width: 100%;
+            padding: 0 10px;
             box-sizing: border-box;
-            border-radius: 0 0 10px 10px;
-            max-height: 0; 
-            overflow: hidden;
-            transition: max-height 0.3s ease-in-out;
-            order: 2; 
-            position: static;
-            margin-top: 5px; 
+            color: #eee;
+            font-size: 0.9em;
+            list-style: none;
+            margin: 0;
         }
 
-        .video-container.увеличенный .hidden-text {
-            max-height: 150px;
-            overflow-y: auto; 
-        }
+            .project-details li {
+                margin-bottom: 5px;
+            }
+
+            .project-details strong {
+                color: #000fff;
+            }
     </style>
 </head>
 <body>
@@ -155,10 +143,10 @@
 
                 <script>
                     function copyText() {
-                        const texte = document.getElementById("monTexte").textContent;
-                        navigator.clipboard.writeText(texte).then(() => {
-                            alert("Email copié !");
-                        });
+                    const texte = document.getElementById("monTexte").textContent;
+                    navigator.clipboard.writeText(texte).then(() => {
+                    alert("Email copié !");
+                    });
                     }
                 </script>
             </div>
@@ -172,95 +160,98 @@
     </header>
     <div>
         <h1>
-            <br>
-            <br>
+            <br><br>
             Voici mes projets réalisés lors de ma formation au Gaming Campus.
-            <br>
-            <br>
-            Je vous invite à les découvrir en cliquant sur les vidéos ci-dessous. Il y a aussi un petit texte explicatif sur chaque projet.
+            <br><br>
+            Je vous invite à les découvrir en cliquant sur les cartes ci-dessous.
         </h1>
     </div>
+
     <div class="grid-container">
-        <div class="video-container" onclick="toggleSize(this)">
-            <video controls class="video-player">
-                <source src="../Presentation/WordlePresentation.mp4" type="video/mp4">
-                <p>Votre navigateur ne supporte pas la lecture de vidéos.</p>
-            </video>
-            <p class="video-title">Wordle (Cliquez pour voir la description)</p>
-            <p class="hidden-text">Ce Wordle est un projet en solo lors de mes premières semaines au Gaming Campus. Il a duré 1 semaine et contient dans sa base de données une vingtaine de mots.</p>
-        </div>
+        <!-- Projet Wordle -->
+        <a href="projets/wordle.html" target="_blank" class="project-card">
+            <img src="../images/wordle.png" alt="Wordle" class="project-image">
+            <p class="project-title">Wordle</p>
+            <ul class="project-details">
+                <li><strong>Durée :</strong> 1 semaine</li>
+                <li><strong>Langue :</strong> C++</li>
+                <li><strong>Moteur :</strong> Console</li>
+                <li><strong>Projet :</strong> Gaming Campus</li>
+            </ul>
+        </a>
 
-        <div class="video-container" onclick="toggleSize(this)">
-            <video controls class="video-player">
-                <source src="../Presentation/StarElementalPresentation.mp4" type="video/mp4">
-                <p>Votre navigateur ne supporte pas la lecture de vidéos.</p>
-            </video>
-            <p class="video-title">StarElemental (Cliquez pour voir la description)</p>
-            <p class="hidden-text">StarElemental est une sorte de Survival dans le thème du Shoot'Em Up. Le twist, ce n'est pas vous qui avez les armes alors survivez et atteignez le meilleur score ! Il a été créé en groupe de 2 en 2 semaines et avait pour thème les éléments, c'est pour cela qu'il y avait une roue comprenant différents vaisseaux qui avaient chacun une résistance à un élément ennemi, élément ayant des particularités comme une plus grande vitesse ou encore une plus grande présence.</p>
-        </div>
+        <!-- Projet StarElemental -->
+        <a href="projets/starelemental.html" target="_blank" class="project-card">
+            <img src="../images/starelemental.png" alt="StarElemental" class="project-image">
+            <p class="project-title">StarElemental</p>
+            <ul class="project-details">
+                <li><strong>Durée :</strong> 2 semaines</li>
+                <li><strong>Langue :</strong> C++</li>
+                <li><strong>Moteur :</strong> Raylib (librairie)</li>
+                <li><strong>Projet :</strong> Gaming Campus</li>
+            </ul>
+        </a>
 
-        <div class="video-container" onclick="toggleSize(this)">
-            <video controls class="video-player">
-                <source src="../Presentation/SolnishPresentation.mp4" type="video/mp4">
-                <p>Votre navigateur ne supporte pas la lecture de vidéos.</p>
-            </video>
-            <p class="video-title">Solnish (Cliquez pour voir la description)</p>
-            <p class="hidden-text">Solnish est un projet de 2 semaines dont je suis extrêmement fier en tant que seul Dev Gameplay de mon groupe de 4 Tech (1 Gameplay, 2 Moteurs et 1 chef de projet). Nous étions 10 dans chaque groupe (4 tech de première année, 3 artistes de première année et 3 business de deuxième année). Lors de ces 2 semaines nous avons dû régler de nombreux problèmes et beaucoup d'entre eux ont été résolus. J'ai gardé bon nombre de souvenirs, bons et mauvais, de ce premier projet inter-classe qui me permettront à l'avenir de comprendre un peu plus les problèmes des autres filières.</p>
-        </div>
+        <!-- Projet Solnish -->
+        <a href="projets/solnish.html" target="_blank" class="project-card">
+            <img src="../images/solnish.png" alt="Solnish" class="project-image">
+            <p class="project-title">Solnish</p>
+            <ul class="project-details">
+                <li><strong>Durée :</strong> 2 semaines</li>
+                <li><strong>Langue :</strong> C++</li>
+                <li><strong>Moteur :</strong> Moteur Custom</li>
+                <li><strong>Projet :</strong> Gaming Campus</li>
+            </ul>
+        </a>
 
-        <div class="video-container" onclick="toggleSize(this)">
-            <video controls class="video-player">
-                <source src="../Presentation/Punk&RobotsPresentation.mp4" type="video/mp4">
-                <p>Votre navigateur ne supporte pas la lecture de vidéos.</p>
-            </video>
-            <p class="video-title">Punk and Robots (Cliquez pour voir la description)</p>
-            <p class="hidden-text">Punk and robots est un projet en groupe de 5 (3 développeurs, 2 artistes) de 3 semaines. Ce deuxième projet inter-classe était plus chaotique que le premier (Solnish) de part le fait qu'il était en 3D et qu'on devait apprendre un moteur custom reprenant les bases du C# mais en C++. Je regrette ne pas avoir pû profiter du temps donné de manière efficace pour rendre un meilleur jeu.</p>
-        </div>
-        <div class="video-container" onclick="toggleSize(this)">
-            <video controls class="video-player">
-                <source src="../Presentation/FlappyZPresentation.mp4" type="video/mp4">
-                <p>Votre navigateur ne supporte pas la lecture de vidéos.</p>
-            </video>
-            <p class="video-title">Flappy Z : The Sequel (Cliquez pour voir la description)</p>
-            <p class="hidden-text">Flappy Zeubi : The Sequel étais un projet de 2 semaines en groupe de 2. J'ai adoré prendre part à ce projet et le résultat, au moins graphiquement, le prouve très bien. Il possède 3 niveaux de difficulté rendant le jeu très prenant.</p>
-        </div>
-        <div class="video-container" onclick="toggleSize(this)">
-            <video controls class="video-player">
-                <source src="../Presentation/demo.mp4" type="video/mp4">
-                <p>Votre navigateur ne supporte pas la lecture de vidéos.</p>
-            </video>
-            <p class="video-title">InThePortal (Cliquez pour voir la description)</p>
-            <p class="hidden-text">InthePortal est un projet de 2 semaines en groupe de 2. Il est le premier que je fais sur Unity et j'accroche enormément. Il est actuellement en cours de production donc la vidéo n'est qu'une démo de milieu de projet.</p>
-        </div>
+        <!-- Projet Punk & Robots -->
+        <a href="projets/punk-and-robots.html" target="_blank" class="project-card">
+            <img src="../images/punkandrobots.png" alt="Punk and Robots" class="project-image">
+            <p class="project-title">Punk and Robots</p>
+            <ul class="project-details">
+                <li><strong>Durée :</strong> 3 semaines</li>
+                <li><strong>Langue :</strong> C++</li>
+                <li><strong>Moteur :</strong> Moteur Custom</li>
+                <li><strong>Projet :</strong> Gaming Campus</li>
+            </ul>
+        </a>
+
+        <!-- Projet Flappy Z -->
+        <a href="projets/flappy-z.html" target="_blank" class="project-card">
+            <img src="../images/flappyzeubi.png" alt="Flappy Z" class="project-image">
+            <p class="project-title">Flappy Z : The Sequel</p>
+            <ul class="project-details">
+                <li><strong>Durée :</strong> 2 semaines</li>
+                <li><strong>Langue :</strong> C++</li>
+                <li><strong>Moteur :</strong> Moteur Custom</li>
+                <li><strong>Projet :</strong> Gaming Campus</li>
+            </ul>
+        </a>
+
+        <!-- Projet InThePortal -->
+        <a href="projets/intheportal.html" target="_blank" class="project-card">
+            <img src="../images/intheportal.png" alt="InThePortal" class="project-image">
+            <p class="project-title">InThePortal</p>
+            <ul class="project-details">
+                <li><strong>Durée :</strong> 2 semaines</li>
+                <li><strong>Langue :</strong> C#</li>
+                <li><strong>Moteur :</strong> Unity</li>
+                <li><strong>Projet :</strong> Gaming Campus</li>
+            </ul>
+        </a>
+
+        <!-- Plugin TensuraUHC-->
+        <a href="projets/tensurauhc.html" target="_blank" class="project-card">
+            <img src="../images/tensura.png" alt="tensuraUHC" class="project-image">
+            <p class="project-title">Tensura UHC</p>
+            <ul class="project-details">
+                <li><strong>Durée :</strong> 1+ année</li>
+                <li><strong>Langue :</strong> Java</li>
+                <li><strong>Moteur :</strong> Aucun (plugin Minecraft)</li>
+                <li><strong>Projet :</strong> Personel</li>
+            </ul>
+        </a>
 
     </div>
-
-    <script>
-        function toggleSize(container) {
-            container.classList.toggle('увеличенный');
-        }
-
-        let videoContainers = document.querySelectorAll('.video-container');
-
-        videoContainers.forEach(container => {
-            let video = container.querySelector('.video-player');
-
-            container.addEventListener('mouseenter', function () {
-                video.controls = true;
-            });
-
-            container.addEventListener('mouseleave', function () {
-                video.controls = false;
-            });
-
-            video.addEventListener('focus', function () {
-                video.controls = true;
-            });
-
-            video.addEventListener('blur', function () {
-                video.controls = false;
-            });
-        });
-    </script>
 </body>
 </html>
